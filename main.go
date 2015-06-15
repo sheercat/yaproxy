@@ -17,9 +17,7 @@ func main() {
 	proxy := goproxy.NewProxyHttpServer()
 	proxy.Verbose = true
 	if *basicAuthUser != "" && *basicAuthPass != "" {
-		log.Println("auth basic")
 		auth.ProxyBasic(proxy, "yaproxy", func(user, pass string) bool {
-			log.Println("auth basic do")
 			return user == *basicAuthUser && pass == *basicAuthPass
 		})
 	}
