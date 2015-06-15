@@ -1,4 +1,4 @@
-# atto
+# yaproxy
 
 super mini proxy server.
 
